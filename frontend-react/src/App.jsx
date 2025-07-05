@@ -5,9 +5,10 @@ import Login from './components/Login';
 import Main from './components/Main';
 import Register from './components/Register';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import AuthProvider from './AuthProvider';
 function App() {
   return (
+    <AuthProvider>
     <BrowserRouter>
       <div className="d-flex flex-column min-vh-100 bg-black">
         <Header />
@@ -23,6 +24,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </AuthProvider>
   );
 }
 

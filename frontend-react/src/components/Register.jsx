@@ -2,8 +2,9 @@ import React from 'react';
 import Button from './Button';
 import { useState } from 'react';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
 const Register = () => {
+  const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -26,7 +27,7 @@ const Register = () => {
             setUsername('');
             setEmail('');
             setPassword('');
-            
+            navigate('/login'); // Redirect to login page after successful registration
             
         }catch(err){
             setError(err.response.data);
