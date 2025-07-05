@@ -3,6 +3,7 @@ import Button from './Button';
 
 const Main = () => {
   return (
+   
     <div className="container text-light py-5">
       <div className="text-center mb-5">
         <h1 className="display-4 fw-bold">Welcome to <span className="text-primary">StockVision</span></h1>

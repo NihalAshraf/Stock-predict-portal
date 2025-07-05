@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <nav
@@ -11,13 +11,14 @@ const Header = () => {
         borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
       }}
     >
-      <a className="navbar-brand text-white fw-bold fs-4" href="/">
+     <Link to="/" className="navbar-brand text-light fw-bold">
         <span className="text-primary">📈 StockVision</span>
-      </a>
+    </Link>
+    
 
       <div className="ms-auto d-flex gap-2">
-        <Button label="Login" variant="outline" />
-        <Button label="Register" variant="solid" />
+        <Button label="Login" variant="outline" url='/login' />
+        <Button label="Register" variant="solid" url='/register'/>
       </div>
     </nav>
   );
