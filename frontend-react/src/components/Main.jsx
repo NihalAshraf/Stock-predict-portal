@@ -1,7 +1,12 @@
 import React from 'react';
 import Button from './Button';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Main = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+   navigate('/dashboard');
+  }
   return (
    
     <div className="container text-light py-5">
@@ -40,7 +45,7 @@ const Main = () => {
           </div>
         </div>
         <div className="col-12 text-center mt-4">
-          <Button label="Get Started" variant="solid"  />
+          <Button onClick={handleClick} label="Get Started" variant="solid"  />
         </div>
       </div>
     </div>
